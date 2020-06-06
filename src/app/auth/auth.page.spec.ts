@@ -51,36 +51,36 @@ describe('AuthPage', () => {
     fixture.detectChanges();
   });
 
-  // it('should create', () => {
-  //   expect(component).toBeTruthy();
-  //   expect(fixture).toBeTruthy();
-  // });
+  it('should create', () => {
+    expect(component).toBeTruthy();
+    expect(fixture).toBeTruthy();
+  });
 
-  // it('should have a isLoading set to false', () => {
-  //   expect(component.isLoading).toBeFalsy();
-  //   });
+  it('should have a isLoading set to false', () => {
+    expect(component.isLoading).toBeFalsy();
+    });
 
-  // it('should have a isLogin set to true', () => {
-  //     expect(component.isLogin).toBeTruthy();
-  //     });  
+  it('should have a isLogin set to true', () => {
+      expect(component.isLogin).toBeTruthy();
+      });  
 
-  // it('should have a title class',()=>{
-  //   expect(component.title).toBeDefined();
-  // });
+  it('should have a title class',()=>{
+    expect(component.title).toBeDefined();
+  });
   
   
-  // it('should have a messege class',()=>{
-  //   expect(component.messege).toBeDefined();
-  // });
+  it('should have a messege class',()=>{
+    expect(component.messege).toBeDefined();
+  });
 
-  // it('should contain elements',()=>{
+  it('should contain elements',()=>{
     
-  //   expect(element(by.name('password')).isPresent).toBe(true);
-  //   expect(element(by.name('email')).isPresent).toBe(true);
-  //   expect(element(by.name('switch')).isPresent).toBe(true);
+    expect(element(by.name('password')).isPresent).toBe(true);
+    expect(element(by.name('email')).isPresent).toBe(true);
+    expect(element(by.name('switch')).isPresent).toBe(true);
 
 
-  // });
+  });
     
     
 });

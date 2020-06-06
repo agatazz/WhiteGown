@@ -1,9 +1,9 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start" style="color: #ffffff;background-color: #530001;">
+    <ion-buttons name="button1" slot="start" style="color: #ffffff;background-color: #530001;">
       <ion-back-button defaultHref="/dresses/tabs/discover"></ion-back-button>
     </ion-buttons>
-    <ion-title class="title">{{ isLoading ? 'Loading...' : dress.title }}</ion-title>
+    <ion-title name="title" class="title">{{ isLoading ? 'Loading...' : dress.title }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -24,7 +24,7 @@
     </ion-row>
     <ion-row *ngIf="isBookable">
       <ion-col size-sm="6" offset-sm="3" class="ion-text-center">
-        <ion-button color="primary" margin (click)="onBookDress()"
+        <ion-button name="button2" color="primary" margin (click)="onBookDress()"
           >Book</ion-button
         >
       </ion-col>
