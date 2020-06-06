@@ -8,6 +8,8 @@ Przetesotwane komponenty:
 - WhiteGown/src/app/auth/auth.page.spec.ts  (Auth.page.ts => testy: auth.page.sepcs.ts)
 - WhiteGown/src/app/dresses/discover/dress-detail/dress-detail.page.spec.ts (Dress-detail.page.ts => testy: dress-detail.page.specs.ts)
 
+![Image of unit test](https://i.ibb.co/jvHnjt4/tests1.png)
+
 ## testy e2e
 
 ### Odtworzenie =>w terminalu nodejs wpisać npm run e2e
