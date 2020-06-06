@@ -1,6 +1,6 @@
 {
-  "appId": "com.udemycourse.ionicangular",
-  "appName": "ionic-angular-course",
+  "appId": "io.ionic.starter",
+  "appName": "projektIonic",
   "bundledWebRuntime": false,
   "webDir": "www"
 }

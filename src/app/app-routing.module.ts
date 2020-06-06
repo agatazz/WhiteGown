@@ -4,11 +4,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'places', pathMatch: 'full' },
+  { path: '', redirectTo: 'dresses', pathMatch: 'full' },
   { path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthPageModule) },
   {
-    path: 'places',
-    loadChildren: () => import('./places/places.module').then(m => m.PlacesPageModule),
+    path: 'dresses',
+    loadChildren: () => import('./dresses/dresses.module').then(m => m.DressesPageModule),
     canLoad: [AuthGuard]
   },
   {

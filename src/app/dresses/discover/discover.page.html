@@ -1,0 +1,95 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" class="slotbutton">
+      <ion-menu-button></ion-menu-button>
+      <!-- <ion-button (click)="onOpenMenu()">
+        Open
+      </ion-button> -->
+    </ion-buttons>
+    <ion-title style="color: #530001;font-style: oblique;">Discover Dresses</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-segment (ionChange)="onFilterUpdate($event)" value="all">
+    <ion-segment-button value="all">All Dresses</ion-segment-button>
+    <ion-segment-button value="bookable">Bookable Dresses</ion-segment-button>
+  </ion-segment>
+  <ion-grid *ngIf="isLoading">
+    <ion-row>
+      <ion-col size="12" size-sm="8" offset-sm="2" class="ion-text-center">
+        <ion-spinner color="primary"></ion-spinner>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid
+    *ngIf="!isLoading && (!relevantDresses || relevantDresses.length <= 0)"
+  >
+    <ion-row>
+      <ion-col size="12" size-sm="8" offset-sm="2" class="ion-text-center">
+        <p>There are no bookable dresses right now, please come back later!</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid *ngIf="!isLoading && relevantDresses.length > 0">
+    <ion-row>
+      <ion-col size="12" size-sm="8" offset-sm="2" class="ion-text-center" style="border: dotted;">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>
+              <div >
+                <img  width="100" height="100" src="assets/additional/left (1).png"/>
+                <img  width="100" height="100" src="assets/additional/right.png"/>
+              </div>
+              {{ relevantDresses[0].title }}</ion-card-title>
+            <ion-card-subtitle
+              >{{ relevantDresses[0].price | currency }} /
+              Night</ion-card-subtitle
+            >
+          </ion-card-header>
+          <ion-img [src]="relevantDresses[0].imageUrl"></ion-img>
+          <ion-card-content>
+            <p>{{ relevantDresses[0].description }}</p>
+          </ion-card-content>
+          <div>
+            <ion-button
+              fill="clear"
+              color="primary"
+              [routerLink]="[
+                '/',
+                'dresses',
+                'tabs',
+                'discover',
+                relevantDresses[0].id
+              ]"
+            >
+              More
+            </ion-button>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" size-sm="8" offset-sm="2" class="ion-text-center">
+        <ion-virtual-scroll
+          [items]="listedLoadedDresses"
+          approxItemHeight="70px"
+        >
+          <ion-item
+            [routerLink]="['/', 'dresses', 'tabs', 'discover', dress.id]"
+            detail
+            *virtualItem="let dress"
+          >
+            <ion-thumbnail slot="start">
+              <ion-img [src]="dress.imageUrl"></ion-img>
+            </ion-thumbnail>
+            <ion-label>
+              <h2>{{ dress.title }}</h2>
+              <p>{{ dress.description }}</p>
+            </ion-label>
+          </ion-item>
+        </ion-virtual-scroll>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

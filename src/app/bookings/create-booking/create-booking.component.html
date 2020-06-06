@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>{{ selectedPlace.title }}</ion-title>
+    <ion-title class="title">{{ selectedDress.title }}</ion-title>
     <ion-buttons slot="primary">
       <ion-button (click)="onCancel()">
         <ion-icon name="close"></ion-icon>
@@ -10,7 +10,7 @@
 </ion-header>
 
 <ion-content class="ion-text-center" padding>
-  <form (ngSubmit)="onBookPlace()" #f="ngForm">
+  <form (ngSubmit)="onBookDress()" #f="ngForm">
     <ion-grid>
       <ion-row>
         <ion-col size-sm="6" offset-sm="3">
@@ -38,7 +38,7 @@
           </ion-item>
         </ion-col>
       </ion-row>
-      <ion-row>
+      <!-- <ion-row>
         <ion-col size-sm="6" offset-sm="3">
           <ion-item>
             <ion-label position="floating">Number of Guests</ion-label>
@@ -49,7 +49,7 @@
             </ion-select>
           </ion-item>
         </ion-col>
-      </ion-row>
+      </ion-row> -->
       <ion-row>
         <ion-col size-sm="3" offset-sm="3">
           <ion-item>
@@ -57,8 +57,8 @@
             <ion-datetime
               display-format="MMM DD YYYY"
               picker-format="YY MMM DD"
-              [min]="selectedPlace.availableFrom.toISOString()"
-              [max]="selectedPlace.availableTo.toISOString()"
+              [min]="selectedDress.availableFrom.toISOString()"
+              [max]="selectedDress.availableTo.toISOString()"
               [ngModel]="startDate"
               name="date-from"
               required
@@ -75,7 +75,7 @@
               display-format="MMM DD YYYY"
               picker-format="YY MMM DD"
               [min]="startDateCtrl.value"
-              [max]="selectedPlace.availableTo.toISOString()"
+              [max]="selectedDress.availableTo.toISOString()"
               [ngModel]="endDate"
               name="date-to"
               required

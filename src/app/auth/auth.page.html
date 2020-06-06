@@ -1,9 +1,16 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title size="large" class="ion-text-center">{{ isLogin ? 'Sign In' : 'Sign Up' }}</ion-title>
+    <ion-title size="large" class="ion-text-center" style="color: #530001;font-style: oblique;">{{ isLogin ? 'Sign In' : 'Sign Up' }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
+<ion-row>
+  <ion-col class="center">
+    <div>
+    <img   src="assets/logos/logoWG.png" class="ion-align-self-center">
+  </div>
+  </ion-col>
+</ion-row>
 <ion-content class="ion-padding">
   <form #f="ngForm" (ngSubmit)="onSubmit(f)">
     <ion-grid>
@@ -55,23 +62,26 @@
       <ion-row>
         <ion-col size-sm="6" offset-sm="3">
           <ion-button 
+          name="switch"
           type="button" 
-          color="primary"  
+          color="burgundy"  
           expand="block"
           (click)="onSwitchAuthMode()">
             Switch to {{ isLogin ? 'Sign Up' : 'Sign In' }}
           </ion-button>
           <ion-button
+            name="submit"
             type="submit"
-            color="primary"
-            (click)="onLogin()"
+            color="burgundy"
             expand="block"
             [disabled]="!f.valid"
           >
-            Sign In
+            Continue
+            <ion-icon name="caret-forward-outline"></ion-icon>
           </ion-button>
         </ion-col>
       </ion-row>
+      
     </ion-grid>
   </form>
 

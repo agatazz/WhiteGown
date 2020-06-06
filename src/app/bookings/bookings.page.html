@@ -1,9 +1,9 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start">
+    <ion-buttons slot="start" class="slotbutton">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Your Bookings</ion-title>
+    <ion-title class="title">Your Bookings</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -33,11 +33,11 @@
           >
             <ion-item>
               <ion-avatar slot="start">
-                <ion-img [src]="booking.placeImage"></ion-img>
+                <ion-img [src]="booking.dressImage"></ion-img>
               </ion-avatar>
               <ion-label>
-                <h5>{{ booking.placeTitle }}</h5>
-                <p>Guests: {{ booking.guestNumber }}</p>
+                <h5>{{ booking.dressTitle }}</h5>
+                 <!-- <p>Guests: {{ booking.guestNumber }}</p> -->
               </ion-label>
             </ion-item>
             <ion-item-options>

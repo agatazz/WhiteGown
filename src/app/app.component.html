@@ -2,30 +2,28 @@
   <ion-menu side="start">
     <ion-header>
       <ion-toolbar>
-        <ion-title>
-          PairBnB
-        </ion-title>
+        <ion-title style="color: #530001;text-align: center;font-style: oblique;">White Gown</ion-title>
       </ion-toolbar>
     </ion-header>
 
     <ion-content>
       <ion-list>
         <ion-menu-toggle>
-          <ion-item lines="none" routerLink="/places/tabs/discover">
-            <ion-icon name="business" slot="start"></ion-icon>
-            <ion-label>Discover Places</ion-label>
+          <ion-item lines="none" routerLink="/dresses/tabs/discover">
+            <ion-icon name="woman-outline" slot="start" style="color:#530001;"></ion-icon>
+            <ion-label style="color:black;">Discover Dresses</ion-label>
           </ion-item>
         </ion-menu-toggle>
         <ion-menu-toggle>
           <ion-item lines="none" routerLink="/bookings">
-            <ion-icon name="checkbox-outline" slot="start"></ion-icon>
-            <ion-label>Your Bookings</ion-label>
+            <ion-icon name="checkbox-outline" slot="start" style="color:#530001;"></ion-icon>
+            <ion-label style="color:black;">Your Bookings</ion-label>
           </ion-item>
         </ion-menu-toggle>
         <ion-menu-toggle>
           <ion-item lines="none" (click)="onLogout()" button>
-            <ion-icon name="exit" slot="start"></ion-icon>
-            <ion-label>Logout</ion-label>
+            <ion-icon name="exit-outline" slot="start" style="color:#530001;"></ion-icon>
+            <ion-label style="color:black;">Logout</ion-label>
           </ion-item>
         </ion-menu-toggle>
       </ion-list>

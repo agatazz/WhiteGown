@@ -2,7 +2,7 @@ import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { NgForm } from '@angular/forms';
 
-import { Place } from '../../places/place.model';
+import { Dress } from '../../dresses/dress.model';
 
 @Component({
   selector: 'app-create-booking',
@@ -10,7 +10,7 @@ import { Place } from '../../places/place.model';
   styleUrls: ['./create-booking.component.scss']
 })
 export class CreateBookingComponent implements OnInit {
-  @Input() selectedPlace: Place;
+  @Input() selectedDress: Dress;
   @Input() selectedMode: 'select' | 'random';
   @ViewChild('f', { static: true }) form: NgForm;
   startDate: string;
@@ -19,8 +19,8 @@ export class CreateBookingComponent implements OnInit {
   constructor(private modalCtrl: ModalController) {}
 
   ngOnInit() {
-    const availableFrom = new Date(this.selectedPlace.availableFrom);
-    const availableTo = new Date(this.selectedPlace.availableTo);
+    const availableFrom = new Date(this.selectedDress.availableFrom);
+    const availableTo = new Date(this.selectedDress.availableTo);
     if (this.selectedMode === 'random') {
       this.startDate = new Date(
         availableFrom.getTime() +
@@ -44,7 +44,7 @@ export class CreateBookingComponent implements OnInit {
     this.modalCtrl.dismiss(null, 'cancel');
   }
 
-  onBookPlace() {
+  onBookDress() {
     if (!this.form.valid || !this.datesValid) {
       return;
     }
@@ -54,7 +54,7 @@ export class CreateBookingComponent implements OnInit {
         bookingData: {
           firstName: this.form.value['first-name'],
           lastName: this.form.value['last-name'],
-          guestNumber: +this.form.value['guest-number'],
+          //guestNumber: +this.form.value['guest-number'],
           startDate: new Date(this.form.value['date-from']),
           endDate: new Date(this.form.value['date-to'])
         }

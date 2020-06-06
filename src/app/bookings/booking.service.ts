@@ -10,11 +10,11 @@ interface BookingData {
   bookedFrom: string;
   bookedTo: string;
   firstName: string;
-  guestNumber: number;
+  //guestNumber: number;
   lastName: string;
-  placeId: string;
-  placeImage: string;
-  placeTitle: string;
+  dressId: string;
+  dressImage: string;
+  dressTitle: string;
   userId: string;
 }
 
@@ -29,37 +29,44 @@ export class BookingService {
   constructor(private authService: AuthService, private http: HttpClient) {}
 
   addBooking(
-    placeId: string,
-    placeTitle: string,
-    placeImage: string,
+    dressId: string,
+    dressTitle: string,
+    dressImage: string,
     firstName: string,
     lastName: string,
-    guestNumber: number,
+    //guestNumber: number,
     dateFrom: Date,
     dateTo: Date
   ) {
     let generatedId: string;
-    const newBooking = new Booking(
-      Math.random().toString(),
-      placeId,
-      this.authService.userId,
-      placeTitle,
-      placeImage,
-      firstName,
-      lastName,
-      guestNumber,
-      dateFrom,
-      dateTo
-    );
-    return this.http
+    let newBooking: Booking;
+    return this.authService.userId.pipe
+    (take(1), 
+    switchMap(userId => {
+      if(!userId) {
+        throw new Error('No user id found!');
+      }
+      newBooking = new Booking(
+        Math.random().toString(),
+        dressId,
+        userId,
+        dressTitle,
+        dressImage,
+        firstName,
+        lastName,
+       // guestNumber,
+        dateFrom,
+        dateTo
+      );
+      return this.http
       .post<{ name: string }>(
-        'https://ionic-project-e6703.firebaseio.com/bookings.json',
+        'https://whitegown-c3344.firebaseio.com/bookings.json',
         { ...newBooking, id: null }
-      )
-      .pipe(
-        switchMap(resData => {
-          generatedId = resData.name;
-          return this.bookings;
+      );
+    }), 
+      switchMap(resData => {
+        generatedId = resData.name;
+        return this.bookings;
         }),
         take(1),
         tap(bookings => {
@@ -72,7 +79,7 @@ export class BookingService {
   cancelBooking(bookingId: string) {
     return this.http
       .delete(
-        `https://ionic-project-e6703.firebaseio.com/bookings/${bookingId}.json`
+        `https://whitegown-c3344.firebaseio.com/bookings/${bookingId}.json`
       )
       .pipe(
         switchMap(() => {
@@ -86,13 +93,17 @@ export class BookingService {
   }
 
   fetchBookings() {
-    return this.http
+    return this.authService.userId.pipe(take(1),switchMap(userId => {
+      if(!userId) {
+        throw new Error('No User found!!')
+      }
+      return this.http
       .get<{ [key: string]: BookingData }>(
-        `https://ionic-project-e6703.firebaseio.com/bookings.json?orderBy="userId"&equalTo="${
-          this.authService.userId
+        `https://whitegown-c3344.firebaseio.com/bookings.json?orderBy="userId"&equalTo="${
+          userId
         }"`
       )
-      .pipe(
+    }), 
         map(bookingData => {
           const bookings = [];
           for (const key in bookingData) {
@@ -100,13 +111,13 @@ export class BookingService {
               bookings.push(
                 new Booking(
                   key,
-                  bookingData[key].placeId,
+                  bookingData[key].dressId,
                   bookingData[key].userId,
-                  bookingData[key].placeTitle,
-                  bookingData[key].placeImage,
+                  bookingData[key].dressTitle,
+                  bookingData[key].dressImage,
                   bookingData[key].firstName,
                   bookingData[key].lastName,
-                  bookingData[key].guestNumber,
+                  //bookingData[key].guestNumber,
                   new Date(bookingData[key].bookedFrom),
                   new Date(bookingData[key].bookedTo)
                 )

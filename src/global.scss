@@ -13,3 +13,17 @@
 .ion-invalid.ion-touched ion-label {
     color: var(--ion-color-danger);
 }
+
+ion-header ion-toolbar {
+    --background: url("assets/additional/screen.png") center;
+  }
+
+ 
+  .slotbutton{
+    color: white;
+    background-color: #530001;
+}
+.title{
+    color: #530001;
+    font-style: oblique;
+}
