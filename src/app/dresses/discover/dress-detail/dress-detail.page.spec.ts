@@ -64,7 +64,7 @@ describe('DressDetailPage', () => {
 
   });
 
-  it('title should state detailed informations' , () => {
+  it('Dress should be defined' , () => {
     expect(component.dress).toBeDefined();
   });
 
