@@ -60,8 +60,8 @@ Nazwa testu |     Opis       |     Typ       |  Czynności przygotowawcze       
 - ### b.Sprawozdanie z wykonania scenariuszy testów.
 
 
-Nr.scenariusza | Nazwa | Warunki wstępne | Kroki wykonania | Oczekiwany rezultat |
----------------| ------| --------------- | ----------------| --------------------|
+Nr.scenariusza => Nazwa testu => Warunki  wstępne => Kroki wykonania => Oczekiwany rezultat 
+
 
 #### 1.
 
@@ -355,11 +355,7 @@ Kliknięcie w przycisk Log out
 
 
 
-
-
-# Testy
-
-## testy jednostkowe
+# Testy jednostkowe
 
 ### Odtworzenie =>w środowisku nodejs należy uruchomić aplikacje(ionic serve --lab) a następnie w innym terminalu node js wpisać polecenie:ng test
 
