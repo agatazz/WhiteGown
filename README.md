@@ -4,7 +4,7 @@
 - Nazwa skrócona-WG
 - Nazwa pełna-White Gown
 - Krótki opis -
-W obecnych czasach zjawisko ekonomii współpracy staje się coraz bardziej powszechne.Zjawisko to bazuje na skłonności ludzi do współpracy, pomagania innym i dzielenia się swoimi zasobami, które jest odwzajemnione w różny sposób (materialny i pozamaterialny).Ten fenomen może również znaleźć zastosowanie w branży ślubnej.
+W obecnych czasach zjawisko ekonomii współpracy staje się coraz bardziej powszechne.Zjawisko to bazuje na skłonności ludzi do współpracy, pomagania innym i dzielenia się swoimi zasobami.Ten fenomen może również znaleźć zastosowanie w branży ślubnej.
 Organizacja ślubu wiąże się z wieloma wysokimi kosztami.Kupno sukni jest dużym wydatkiem, jednak często jest to rzecz która nie zostaje użyta więcej niż jeden raz.Naszym rozwiązaniem na ten problem jest stworzenie serwisu, który umożliwia wynajęcie lub oferowanie do wynajęcia swojej sukni.Aplikacja umożliwia wstawienie zdjęcia, opisu,ustalenie terminów w których możliwe jest wynajęcie sukienki oraz cenę oferty jak i również przeglądanie istniejących już ofert.Dzięki takiemu rozwiązaniu użytkownicy mogą wybrać spośród wielu różnorodnych sukienek oraz zaoszczędzić pieniądze a osoby oferujące sukienki mogą wykorzystać swój strój do zarobienia pieniędzy.
 
 ## 2.Prawa autorskie
