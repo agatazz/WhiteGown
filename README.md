@@ -65,7 +65,7 @@ Nr.scenariusza => Nazwa testu => Warunki  wstępne => Kroki wykonania => Oczekiw
 
 #### 1.
 
-##### 1.
+##### 1.1
 Próba założenia konta za pomocą podania tylko maila
 
 Istnieje interfejs umożliwiający zalogowanie się do systemu
@@ -75,7 +75,7 @@ Wprowadzić mail w pole email
 1.Wyskakuje ostrzeżenie pod polem hasła “Should be at least 6 characters long”
 2.Nie można kliknąć w przycisk Continue umożliwiający założenie konta
 
-##### 1.
+##### 1.2
 Próba założenia konta za pomocą podania maila bez znaku “@”
 
 Istnieje interfejs umożliwiający zalogowanie się do systemu
@@ -85,7 +85,7 @@ Wprowadzić mail o nie odpowiedniej składni(bez znaku “@”) w pole email
 1.Wyskakuje ostrzeżenie “Should be a valid email address”
 2.Nie można kliknąć w przycisk Continue umożliwiający założenie konta
 
-##### 1.
+##### 1.3
 Próba założenia konta za pomocą podania tylko hasła
 
 Istnieje interfejs umożliwiający zalogowanie się do systemu
@@ -95,7 +95,7 @@ Wprowadzić hasło w pole password
 1.Wyskakuje ostrzeżenie “Should be a valid email address” pod polem email
 2.Nie można kliknąć w przycisk Continue umożliwiający założenie konta
 
-##### 1.
+##### 1.4
 Próba założenia konta za pomocą hasła składającego się z mniej niż 6 znaków
 
 Istnieje interfejs umożliwiający zalogowanie się do systemu
@@ -105,7 +105,7 @@ Istnieje interfejs umożliwiający zalogowanie się do systemu
 
 1.Wyskakuje ostrzeżenie pod polem hasła “Should be at least 6 characters long”
 
-##### 1.
+##### 1.5
 Próba założenia konta za pomocą odpowiedniego maila i hasła
 
 Istnieje interfejs umożliwiający zalogowanie się do systemu
@@ -118,7 +118,7 @@ Użytkownik zostaje przeniesiony do aplikacji
 
 #### 2.
 
-##### 2.
+##### 2.1
 Próba zalogowania się tylko za pomocą maila
 
 Istnieje interfejs umożliwiający zalogowanie się do systemu
@@ -128,7 +128,7 @@ Wprowadzić mail w pole email
 1.Wyskakuje ostrzeżenie pod polem hasła “Should be at least 6 characters long”
 2.Nie można kliknąć w przycisk Continue umożliwiający zalogowania się do konta
 
-##### 2.
+##### 2.2
 Próba zalogowania się tylko za pomocą hasła
 
 Istnieje interfejs umożliwiający zalogowanie się do systemu
@@ -138,7 +138,7 @@ Wprowadzić hasło w pole password
 1.Wyskakuje ostrzeżenie “Should be a valid email address”
 2.Nie można kliknąć w przycisk Continue umożliwiający zalogowania się do konta
 
-##### 2.
+##### 2.3
 Próba zalogowania się tylko za pomocą błędnego maila
 
 Istnieje interfejs umożliwiający zalogowanie się do systemu
@@ -149,7 +149,7 @@ Istnieje interfejs umożliwiający zalogowanie się do systemu
 1.Wyskakuje ostrzeżenie “Email address could not be found”
 2.Nie można kliknąć w przycisk Continue umożliwiający zalogowanie się do  konta
 
-##### 2.
+##### 2.4
 Próba zalogowania się za pomocą błędnego hasła 
 
 Istnieje interfejs umożliwiający zalogowanie się do systemu
@@ -160,7 +160,7 @@ Istnieje interfejs umożliwiający zalogowanie się do systemu
 1.Wyskakuje ostrzeżenie “This password is not correct”
 2.Nie można kliknąć w przycisk Continue umożliwiający zalogowanie się do konta
 
-##### 2.
+##### 2.5
 Próba zalogowania się za pomocą poprawnego maila i poprawnego hasła
 
 Istnieje interfejs umożliwiający zalogowanie się do systemu 
@@ -172,7 +172,7 @@ Użytkownik zostaje przeniesiony do systemu
 
 #### 3.
 
-##### 3.
+##### 3.1
 Przeglądanie zakładki Discover Dresses bez istniejących ofert
 
 Istnieje zakładka Discover Dresses
@@ -182,7 +182,7 @@ Istnieje zakładka Discover Dresses
 
 Na zakładce nie wyświetlają się żadne oferty
 
-##### 3.
+##### 3.2
 Przeglądanie zakładki Discover Dresses z istniejącymi ofertami
 
 Istnieje zakładka Discover Dresses
@@ -194,7 +194,7 @@ Na zakładce są przedstawione istniejące oferty sukienek
 
 #### 4.
 
-##### 4.
+##### 4.1
 Przeglądanie zakładki Your Bookings bez istniejących ofert
 
 Istnieje zakładka Your  Bookings
@@ -204,7 +204,7 @@ Istnieje zakładka Your  Bookings
 
 Na zakładce widnieje informacja “No bookings found”
 
-##### 4.
+##### 4.2
 Przeglądanie zakładki Your Bookings z istniejącymi ofertami
 
 Istnieje zakładka Your Bookings
@@ -217,7 +217,7 @@ W zakładce Your Bookings znajduje się stworzona przez użytkownika  oferta
 
 #### 5.
 
-##### 5.
+##### 5.1
 Próba dodania sukienki bez tytułu
 
 Istnieje zakładka Add Offer
@@ -226,7 +226,7 @@ Pozostawienie pustego pola Title
 
 Nie można kliknąć przycisku dodania oferty
 
-##### 5.
+##### 5.2
 Próba dodania sukienki bez opisu
 
 Istnieje zakładka Add Offer
@@ -235,7 +235,7 @@ Pozostawienie pustego pola Description
 
 Nie można kliknąć przycisku dodania oferty
 
-##### 5.
+##### 5.3
 Próba dodania sukienki bez ceny
 
 Istnieje zakładka Add Offer
@@ -244,7 +244,7 @@ Pozostawienie pustego pola Price
 
 Nie można kliknąć przycisku dodania oferty
 
-##### 5.
+##### 5.4
 Próba dodania sukienki bez daty dostępności
 
 Istnieje zakładka Add Offer
@@ -253,7 +253,7 @@ Pozostawienie pustych pól Date
 
 Nie można kliknąć przycisku dodania oferty
 
-##### 5.
+##### 5.5
 Próba dodania sukienki bez daty zdjęcia
 
 Istnieje zakładka Add Offer
@@ -262,7 +262,7 @@ Pozostawienie pustego pola Add Image
 
 Nie można kliknąć przycisku dodania oferty
 
-###### 5.
+###### 5.6
 Próba poprawnego dodania sukienki z uzupełnieniem wszystkich  wymaganych pól
 
 Istnieje zakładka Add Offer
@@ -274,7 +274,7 @@ Uzupełnienie wszystkich wymaganych pól poprawnymi wartościami
 
 #### 6.
 
-##### 6.
+##### 6.1
 Próba zabukowania sukienki bez podania imienia
 
 Istnieje funkcjonalność Book
@@ -283,7 +283,7 @@ Pozostawienie pustego pola First Name
 
 Nie można kliknąć przycisku zabukowania oferty
 
-##### 6.
+##### 6.2
 Próba zabukowania sukienki bez podania nazwiska
 
 Istnieje funkcjonalność Book
@@ -292,7 +292,7 @@ Pozostawienie pustego pola Last Name
 
 Nie można kliknąć przycisku zabukowania oferty
 
-##### 6.
+##### 6.3
 Próba zabukowania sukienki z podaniem poprawnych danych
 
 Istnieje funkcjonalność Book
@@ -302,7 +302,7 @@ Uzupełnienie wszystkich wymaganych pól poprawnymi wartościami
 1.Można kliknąć przycisku zabukowania oferty
 2.Po naciśnięciu przycisku Book sukienka została dodana do zakładki Your Bookings
 
-##### 6.
+##### 6.4
 Próba zabukowania sukienki bez podania daty
 
 Istnieje funkcjonalność Book
@@ -313,7 +313,7 @@ Nie można kliknąć przycisku zabukowania oferty
 
 #### 7.
 
-##### 7.
+##### 7.1
 Próba zmiany tytułu oferty sukienki
 
 Istnieje funkcjonalność Edit an Offer
@@ -325,7 +325,7 @@ Istnieje funkcjonalność Edit an Offer
 1.Można zapisać zmianę oferty
 2.Zmiana po zapisaniu jest widoczna w systemie
 
-##### 7.
+##### 7.2
 Próba zmiany opisu oferty sukienki 
 
 Istnieje funkcjonalność Edit an Offer
@@ -339,7 +339,7 @@ Istnieje funkcjonalność Edit an Offer
 
 #### 8.
 
-##### 8.
+##### 8.1
 Próba wylogowania się z konta
 
 Istnieje przycisk Log out
